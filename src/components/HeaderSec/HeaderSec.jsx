@@ -7,7 +7,7 @@ const HeaderSec = () => {
     return (
         <div>
             <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full">
+            <div id="slide1" className="carousel-item relative w-full">
                     <img src={img1} className="w-full h-screen" />
 
                     <div className="absolute rounded-xl left-0 top-0 text-white">

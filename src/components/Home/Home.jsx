@@ -6,7 +6,7 @@ import ShopCategory from "../ShopCategory/ShopCategory";
 
 const Home = () => {
     return (
-        <div className="bg-[#ffe5ea] py-20">
+        <div className="bg-[#ffe5ea] pb-20">
             <HeaderSec />
             <Gallery />
             <ShopCategory />
