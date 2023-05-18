@@ -8,10 +8,10 @@ import img7 from '../../assets/gallery-pic/img7.jpg'
 
 const NewArrival = () => {
     return (
-        <div>
-            <h2 className='text-3xl font-bold text-center'>New Arrivals</h2>
+        <div className='my-12'>
+            <h2 className='text-3xl lg:text-5xl font-bold text-center'>New Arrivals</h2>
             <p className='text-center'>Shop great Toys for your kids</p>
-            <div className='lg:grid grid-cols-4 gap-4'>
+            <div className='lg:grid grid-cols-4 gap-4 mx-16'>
             <div className="card bg-base-100 shadow-xl">
                 <figure><img src={img3} /></figure>
                 <h2 className="card-title">Shoes!</h2>

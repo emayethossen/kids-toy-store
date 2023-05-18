@@ -1,6 +1,6 @@
 import img1 from '../../assets/banner/banner.jpg'
 import img2 from '../../assets/banner/banner1.jpg'
-import img3 from '../../assets/banner-img/banner1.jpg'
+import img3 from '../../assets/banner-img/banner.png'
 
 
 const HeaderSec = () => {
