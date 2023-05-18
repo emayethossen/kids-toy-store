@@ -1,9 +1,15 @@
+import ExclusiveSec from "../ExclusiveSec/ExclusiveSec";
 import Gallery from "../Gallery/Gallery";
+import HeaderSec from "../HeaderSec/HeaderSec";
+import NewArrival from "../NewArrivals/NewArrival";
 
 const Home = () => {
     return (
-        <div className="lg:w-5/6 mx-auto">
+        <div className="bg-[#ffd1dc]">
+            <HeaderSec />
             <Gallery />
+            <NewArrival />
+            <ExclusiveSec />
         </div>
     );
 };

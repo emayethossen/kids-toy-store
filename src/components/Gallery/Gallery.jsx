@@ -8,7 +8,7 @@ import img7 from '../../assets/gallery-pic/img7.jpg'
 
 const Gallery = () => {
     return (
-        <div className='grid m-1 grid-cols-8 grid-rows-6 lg:gap-4 gap-1'>
+        <div className='grid m-1 grid-cols-8 lg:gap-4 gap-1'>
             <div className='row-span-2 col-span-3 lg:rounded-xl rounded shadow-xl'>
                 <img className='lg:rounded-xl rounded h-full w-full' src={img2} alt="" />
             </div>
