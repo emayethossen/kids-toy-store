@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { FaUserCircle } from 'react-icons/fa';
-// import logo from '../../assets/logo.jpg'
+import logo from '../../assets/logo1.jpg'
 import ActiveLink from '../ActiveLink/ActiveLink';
 
 
@@ -40,8 +40,7 @@ const Header = () => {
                             }
                         </ul>
                     </div>
-                    {/* <Link to='/'><img className='w-full h-16' src={logo} alt="" /></Link> */}
-                    <h2>Rahul Hasan</h2>
+                    <Link to='/'><img className='w-full h-16' src={logo} alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

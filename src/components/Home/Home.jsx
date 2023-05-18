@@ -1,8 +1,9 @@
+import Gallery from "../Gallery/Gallery";
 
 const Home = () => {
     return (
-        <div>
-            Home page
+        <div className="lg:w-5/6 mx-auto">
+            <Gallery />
         </div>
     );
 };
