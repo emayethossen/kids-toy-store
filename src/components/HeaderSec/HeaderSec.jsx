@@ -7,45 +7,48 @@ const HeaderSec = () => {
     return (
         <div>
             <div className="carousel w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                    <img src={img1} className="w-full h-screen" />
+                {/* slider one */}
+                <div id="slide1" className="carousel-item relative w-full">
+                    <img src={img1} className="w-full h-[740px] lg:h-[540px]" />
 
-                    <div className="absolute rounded-xl left-0 top-0 text-white">
-                        <div className=''>
-                            <div className='text-center'>
-                                <h4 className='text-3xl font-bold'>Mind games</h4>
-                                <h2 className='text-6xl font-bold'>Favourite Toys</h2>
+                    <div className="absolute rounded-xl left-0 top-14  text-white w-full">
+                        <div className='lg:flex lg:gap-36 items-center justify-center lg:flex-row-reverse space-y-8'>
+                            <div className='flex justify-center items-center'>
+                                <img src={img3} className='w-[400px] h-[420px] lg:w-440px] lg:h-[480px]' />
+                            </div>
+                            <div className='text-center space-y-4'>
+                                <h4 className='lg:text-3xl text-2xl font-bold'>Mind games</h4>
+                                <h2 className='lg:text-6xl text-4xl font-bold'>Favourite Toys</h2>
                                 <p>Up To 60% Off On Selected Toys</p>
                                 <div>
-                                    <button className="btn btn-error mr-5 text-white">Shop Now</button>
+                                    <button className="btn btn-error text-white">Shop Now</button>
                                 </div>
                             </div>
-                            <img src={img3} className='w-full h-full' />
                         </div>
                     </div>
-
 
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
                 </div>
-
-                {/* slider two */}
+                {/* slide two */}
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src={img2} className="w-full h-screen" />
+                    <img src={img2} className="w-full h-[740px] lg:h-[540px]" />
 
-                    <div className="absolute rounded-xl left-0 top-0 text-white">
-                        <div className=''>
-                            <div className='text-center'>
-                                <h4 className='text-3xl font-bold'>Mind games</h4>
-                                <h2 className='text-6xl font-bold'>Favourite Toys</h2>
+                    <div className="absolute rounded-xl left-0 top-14  text-white w-full">
+                        <div className='lg:flex lg:gap-36 items-center justify-center space-y-8'>
+                            <div className='flex justify-center items-center'>
+                                <img src={img3} className='w-[400px] h-[420px] lg:w-440px] lg:h-[480px]' />
+                            </div>
+                            <div className='text-center space-y-4'>
+                                <h4 className='lg:text-3xl text-2xl font-bold'>Mind games</h4>
+                                <h2 className='lg:text-6xl text-4xl font-bold'>Favourite Toys</h2>
                                 <p>Up To 60% Off On Selected Toys</p>
                                 <div>
-                                    <button className="btn btn-error mr-5 text-white">Shop Now</button>
+                                    <button className="btn btn-error text-white">Shop Now</button>
                                 </div>
                             </div>
-                            <img src={img3} className='w-full h-full' />
                         </div>
                     </div>
 

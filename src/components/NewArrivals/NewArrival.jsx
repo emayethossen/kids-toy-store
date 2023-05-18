@@ -11,7 +11,7 @@ const NewArrival = () => {
             <h2 className='text-3xl lg:text-5xl font-bold text-center'>New Arrivals Toys</h2>
             <p className='text-center font-semibold my-4'>Shop great Toys for your kids</p>
 
-            <div className='lg:grid grid-cols-4 gap-4 mx-16'>
+            <div className='lg:grid grid-cols-4 gap-4  lg:space-y-0 space-y-4 mx-16'>
                 {/* card one */}
                 <div className="carousel-item relative w-full col-span-2">
                     <img src={img1} className="h-72 w-full rounded-xl" />
@@ -91,7 +91,7 @@ const NewArrival = () => {
                             <div className='space-y-4'>
                                 <h4 className='text-3xl font-bold uppercase text-[#FF69B4]'>House</h4>
                                 <p className='font-semibold text-gray-700'>Model of baby wooden
-toys assembled....</p>
+                                    toys assembled....</p>
                                 <div>
                                     <button className="btn bg-[#6495ED] border-none hover:bg-[#FF69B4]">Shop Now</button>
                                 </div>

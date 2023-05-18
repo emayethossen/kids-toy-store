@@ -8,26 +8,26 @@ const Footer = () => {
     return (
         <div className='bg-slate-900 pt-6'>
             <div className='flex justify-center'>
-                        <img className='rounded-xl' src={webLogo} alt="" />
-                    </div>
+                <img className='rounded-xl' src={webLogo} alt="" />
+            </div>
             <footer className='grid lg:grid-cols-4 gap-12 md:grid-cols-2 w-3/4 p-10 mx-auto text-white'>
-            
+
                 <div className='text-center lg:text-left space-y-4'>
-                    
+
                     <h2 className='footer-title'>Our Social Links</h2>
                     <div className='space-y-6'>
-                        <div className='flex items-center justify-center'>
+                        <Link to='https://www.facebook.com/emayethossen4/' className='flex items-center justify-center'>
                             <img className='w-8 h-8' src={logo} alt="" />
                             <p className='ml-3'>Facebook</p>
-                        </div>
-                        <div className='flex items-center justify-center'>
+                        </Link>
+                        <Link to='https://twitter.com/emayethossen' className='flex items-center justify-center'>
                             <img className='w-8 h-8' src={logo2} alt="" />
                             <p className='ml-3'>Twitter</p>
-                        </div>
-                        <div className='flex items-center justify-center'>
+                        </Link>
+                        <Link to='https://www.linkedin.com/in/emayethossen' className='flex items-center justify-center'>
                             <img className='w-8 h-8' src={logo3} alt="" />
                             <p className='ml-3'>LinkedIn</p>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div className='text-center lg:text-left space-y-4 hidden lg:flex flex-col'>
