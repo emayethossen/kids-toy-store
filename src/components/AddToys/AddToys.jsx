@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 
 const AddToys = () => {
@@ -49,6 +50,9 @@ const AddToys = () => {
 
     return (
         <div className="lg:px-36">
+            <Helmet>
+                <title>Kid Store Add Toys</title>
+            </Helmet>
             <form onSubmit={handleAddToys} className="space-y-4 bg-[#F3F3F3] lg:p-24 rounded py-4 p-2">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

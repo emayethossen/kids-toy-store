@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 
 const AllToys = () => {
 
@@ -9,7 +10,9 @@ const AllToys = () => {
 
     return (
         <div>
-            Alltoys:
+            <Helmet>
+                <title>Kids Store All Toys</title>
+            </Helmet>
         </div>
     );
 };

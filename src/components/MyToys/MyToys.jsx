@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react';
 import MySingleToy from '../MySingleToy/MySingleToy';
+import { Helmet } from 'react-helmet';
 
 const MyToys = () => {
     const [toys, setToys] = useState([])
@@ -14,6 +15,9 @@ const MyToys = () => {
 
     return (
         <div className='w-3/4 mx-auto space-y-6 lg:mb-16 my-6'>
+            <Helmet>
+                <title>Kids Store My Toys</title>
+            </Helmet>
             {
                 toys.map(toy => <MySingleToy
                     key={toy._id}
