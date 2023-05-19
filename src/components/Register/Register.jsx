@@ -1,8 +1,10 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaGoogle } from 'react-icons/fa';
+import { FaFacebook, FaGoogle, FaTwitter } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import Lottie from 'lottie-react';
+import animation from '../../assets/progerss.json';
 
 const Register = () => {
     const [error, setError] = useState('')
@@ -64,25 +66,28 @@ const Register = () => {
     }
 
     return (
-        <div className='lg:border lg:w-1/2 p-6 w-full mx-auto lg:p-14 lg:my-10 rounded'>
-            <h2 className='text-3xl mb-4 font-bold text-center uppercase'>Register</h2>
-            <form onSubmit={handleRegister} className="form-control">
-                <input type="text" name='name' placeholder="Enter your name" className="input rounded-none bg-gray-100 w-full" required />
-                <input type="text" name='photo' placeholder="Enter your photo url" className="input rounded-none bg-gray-100 w-full my-6" required />
-                <input type="text" name='email' placeholder="Enter your email" className="input rounded-none bg-gray-100 w-full" required />
-                <input type="password" name='password' placeholder="Password" className="input w-full rounded-none bg-gray-100 my-6" required />
-                <input type="password" name='confirm' placeholder="Confirrm password" className="input w-full rounded-none bg-gray-100" required />
-                <p className='text-red-600 my-6'>{error}</p>
-                <input type="submit" value='Sign Up' className="input bg-red-200 text-xl font-bold w-full" />
-                <p className='mt-2 text-center'>Already have an account?<Link className='text-red-300 underline' to='/login'> Login</Link></p>
-            </form>
-            <div className='my-6 w-4/5 mx-auto flex items-center justify-between'>
-                <div className='w-2/5 h-0 border border-red-400'></div>
-                <div>or</div>
-                <div className='w-2/5 h-0 border border-red-400'></div>
+        <div className='grid lg:grid-cols-2 shadow-2xl lg:p-16 bg-[#ffe5ea]'>
+            <div className='w-full flex justify-center items-center bg-white'>
+                <Lottie animationData={animation} loop={true} />
             </div>
-            <div className='text-center space-y-4'>
-                <button onClick={handleGoogleSignIn} className="btn btn-outline"><FaGoogle className='text-pink-500 mr-4 text-xl' /> Continue With Google</button>
+            <div className='lg:border bg-white p-6 w-full lg:p-14 rounded'>
+                <h2 className='text-3xl mb-4 font-bold text-center uppercase'>Register</h2>
+                <form onSubmit={handleRegister} className="form-control">
+                    <input type="text" name='name' placeholder="Enter your name" className="input rounded-none bg-gray-100 w-full" required />
+                    <input type="text" name='photo' placeholder="Enter your photo url" className="input rounded-none bg-gray-100 w-full my-6" required />
+                    <input type="text" name='email' placeholder="Enter your email" className="input rounded-none bg-gray-100 w-full" required />
+                    <input type="password" name='password' placeholder="Password" className="input w-full rounded-none bg-gray-100 my-6" required />
+                    <input type="password" name='confirm' placeholder="Confirrm password" className="input w-full rounded-none bg-gray-100" required />
+                    <p className='text-red-600 my-6'>{error}</p>
+                    <input type="submit" value='Sign Up' className="input bg-red-200 text-xl font-bold w-full" />
+                    <p className='mt-2 text-center'>Already have an account?<Link className='text-red-300 underline' to='/login'> Login</Link></p>
+                </form>
+                <div className='divider'>OR</div>
+                <div className='text-center space-y-4'>
+                    <button onClick={handleGoogleSignIn} className="btn btn-outline"><FaGoogle className='text-pink-500 mr-4 text-xl' /> Continue With Google</button><br />
+                    <button className="btn btn-outline"><FaFacebook className='text-sky-600 hover:bg-[#FF69B4] mr-4 text-xl' /> Continue With Facebook</button><br />
+                    <button className="btn btn-outline"><FaTwitter className='text-sky-500 hover:bg-[#FF69B4] mr-4 text-xl' /> Continue With Twitter</button>
+                </div>
             </div>
         </div>
     );
