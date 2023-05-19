@@ -2,11 +2,9 @@ import { FaEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const MySingleToy = ({ toy }) => {
-    const { _id, photo, name, sellerName, rating } = toy
-
+const MySingleToy = ({ toy, toys, setToys }) => {
+    const { _id, photo, name } = toy;
     const handleDelete = (_id) => {
-        console.log(_id);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -24,12 +22,14 @@ const MySingleToy = ({ toy }) => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
-                        if (data.deletedcount > 0) {
+                        if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
                                 'Your Toy has been deleted.',
                                 'success'
                             )
+                            const remaining = toys.filter(ty => ty._id !== _id);
+                            setToys(remaining);
                         }
                     })
             }

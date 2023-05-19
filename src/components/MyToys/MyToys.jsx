@@ -3,6 +3,7 @@ import MySingleToy from '../MySingleToy/MySingleToy';
 
 const MyToys = () => {
     const [toys, setToys] = useState([])
+
     useEffect(() => {
         fetch('http://localhost:5000/toys')
             .then(res => res.json())
@@ -16,7 +17,9 @@ const MyToys = () => {
             {
                 toys.map(toy => <MySingleToy
                     key={toy._id}
-                    toy={toy} />)
+                    toy={toy}
+                    toys={toys}
+                    setToys={setToys} />)
             }
         </div>
     );

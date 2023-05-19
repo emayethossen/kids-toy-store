@@ -11,6 +11,7 @@ import MyToys from "../components/MyToys/MyToys";
 import Register from "../components/Register/Register";
 import Error from "../components/Error/Error";
 import UpdateToy from "../components/UpdateToy/UpdateToy";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add-toys',
-                element: <AddToys />,
+                element: <PrivateRoute><AddToys /></PrivateRoute>,
             },
             {
                 path: '/all-toys',
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-toys',
-                element: <MyToys />,
+                element: <PrivateRoute><MyToys /></PrivateRoute>,
             },
             {
                 path: '/register',
