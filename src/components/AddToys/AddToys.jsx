@@ -1,7 +1,10 @@
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 const AddToys = () => {
+
+    const [category, setCategory] = useState('');
 
     const handleAddToys = (e) => {
         e.preventDefault();
@@ -24,10 +27,11 @@ const AddToys = () => {
             rating,
             details,
             price,
+            category
         }
         console.log(newToy);
         // send data to the server
-        fetch('https://baby-toys-server-five.vercel.app/toys', {
+        fetch('http://localhost:5000/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,6 +54,7 @@ const AddToys = () => {
 
     return (
         <div className="lg:px-36">
+            <h2 className="lg:text-5xl text-3xl text-center font-bold uppercase">Add a Toy </h2>
             <Helmet>
                 <title>Kid Store Add Toys</title>
             </Helmet>
@@ -77,11 +82,19 @@ const AddToys = () => {
                     <div className="form-control">
                         <input type="text" name="price" placeholder="Enter toys price" className="input" required />
                     </div>
+                    <div>
+                        <select className="w-full input" id="categories" value={category}
+                            onChange={(e) => setCategory(e.target.value)}>
+                            <option value="Wooden Toys">Wooden Toys</option>
+                            <option value="Stuffed Toys">Stuffed Toys</option>
+                            <option value="Construction Toys">Construction Toys</option>
+                            <option value="Transformer Toys">Transformer Toys</option>
+                        </select>
+                    </div>
                 </div>
                 <div className="form-control">
                     <input type="text" name="details" placeholder="Enter toys details" className="input" required />
                 </div>
-
                 <div className="form-control mt-6">
                     <input className="btn text-white border-none bg-[#FF3811]" type="submit" value="Add Toy" />
                 </div>

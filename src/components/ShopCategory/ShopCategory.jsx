@@ -6,9 +6,33 @@ import SingleToy from '../SingleToy/SingleToy';
 const ShopCategory = () => {
 
     const [toys, setToys] = useState([])
+    const [woodenToys, setWoodenToys] = useState([])
+    const [stuffedToys, setStuffedToys] = useState([])
+    const [constructionToys, setConstructionToys] = useState([])
+    const [transformerToys, setTransformerToys] = useState([])
 
     useEffect(() => {
-        fetch('https://baby-toys-server-five.vercel.app/toys')
+        const subCategory = toys.filter(ty => ty.category == 'Wooden Toys');
+        setWoodenToys(subCategory);
+    }, [toys])
+
+    useEffect(() => {
+        const subCategory = toys.filter(ty => ty.category == 'Stuffed Toys');
+        setStuffedToys(subCategory);
+    }, [toys])
+
+    useEffect(() => {
+        const subCategory = toys.filter(ty => ty.category == 'Construction Toys');
+        setConstructionToys(subCategory);
+    }, [toys])
+
+    useEffect(() => {
+        const subCategory = toys.filter(ty => ty.category == 'Transformer Toys');
+        setTransformerToys(subCategory);
+    }, [toys])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/toys')
             .then(res => res.json())
             .then(data => {
                 setToys(data);
@@ -16,7 +40,7 @@ const ShopCategory = () => {
     }, [])
 
     return (
-        <div className='text-center'>
+        <div className='text-center lg:mx-16'>
             <h2 className='text-3xl lg:text-5xl font-bold my-6'>Shop By Category</h2>
             <Tabs className='font-bold'>
                 <TabList className='flex lg:gap-12 justify-center'>
@@ -27,36 +51,36 @@ const ShopCategory = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='w-3/4 mx-auto grid lg:grid-cols-3 gap-6 my-6'>
+                    <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            toys.map(ty => <SingleToy
+                            woodenToys.map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='w-3/4 mx-auto grid lg:grid-cols-3 gap-6 my-6'>
+                    <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            toys.map(ty => <SingleToy
+                            stuffedToys.map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='w-3/4 mx-auto grid lg:grid-cols-3 gap-6 my-6'>
+                    <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            toys.map(ty => <SingleToy
+                            constructionToys.map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='w-3/4 mx-auto grid lg:grid-cols-3 gap-6 my-6'>
+                    <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            toys.map(ty => <SingleToy
+                            transformerToys.map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }
