@@ -8,7 +8,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
 
     const [toys, setToys] = useState([])
-    const url = `http://localhost:5000/toys?email=${user.email}`
+    const url = `https://baby-toys-server-five.vercel.app/toys?email=${user.email}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -22,13 +22,40 @@ const MyToys = () => {
             <Helmet>
                 <title>Kids Store My Toys</title>
             </Helmet>
-            {
-                toys.map(toy => <MySingleToy
-                    key={toy._id}
-                    toy={toy}
-                    toys={toys}
-                    setToys={setToys} />)
-            }
+
+            <div className="overflow-x-auto w-full">
+                <table className="table w-full rounded-xl">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox" className="checkbox" />
+                                </label>
+                            </th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Sub-Category</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Details</th>
+                            <th>Edit & Delete</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            toys.map(toy => <MySingleToy
+                                key={toy._id}
+                                toy={toy}
+                                toys={toys}
+                                setToys={setToys} />)
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
         </div>
     );
 };

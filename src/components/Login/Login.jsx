@@ -54,7 +54,7 @@ const Login = () => {
             <div className='lg:border lg:w-full lg:p-14 p-6 rounded bg-white'>
                 <h2 className='text-3xl mb-4 font-bold text-center uppercase'>Login</h2>
                 <form onSubmit={handleLogin} className="form-control">
-                    <input type="text" name='email' placeholder="Enter your email" className="input rounded bg-gray-100 w-full" required />
+                    <input type="email" name='email' placeholder="Enter your email" className="input rounded bg-gray-100 w-full" required />
                     <input type="password" name='password' placeholder="Enter your password" className="input w-full rounded bg-gray-100 mt-6" required />
                     <p className='text-red-600 pl-2'>{error}</p>
                     <p className='text-red-300 my-2'><Link to='/register'>Forget Password?</Link></p>

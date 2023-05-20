@@ -19,7 +19,7 @@ const ExclusiveSec = () => {
     return (
         <div className='lg:mx-10'>
             <h2 className='text-center text-lg lg:text-3xl mt-12 uppercase font-semibold tracking-widest text-[#FF69B4]'>Trending Products</h2>
-            <p className='lg:text-5xl text-3xl mb-12 font-bold text-center'>Exclusive Collection</p>
+            <p className='lg:text-5xl text-3xl mb-12 font-bold text-center text-[#FF69B4]'>Exclusive Collection</p>
             <div className='grid lg:grid-cols-4 grid-cols-1 gap-4'>
                 <div data-aos="flip-left" className='rounded-lg bg-base-200 shadow-xl p-2 text-center mx-16 lg:mx-0'>
                     <figure><img className='h-48 rounded w-full' src={img1} /></figure>

@@ -32,7 +32,7 @@ const ShopCategory = () => {
     }, [toys])
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://baby-toys-server-five.vercel.app/toys')
             .then(res => res.json())
             .then(data => {
                 setToys(data);
@@ -41,7 +41,7 @@ const ShopCategory = () => {
 
     return (
         <div className='text-center lg:mx-16'>
-            <h2 className='text-3xl lg:text-5xl font-bold my-6'>Shop By Category</h2>
+            <h2 className='text-3xl lg:text-5xl font-bold my-6 text-[#FF69B4]'>Shop By Category</h2>
             <Tabs className='font-bold'>
                 <TabList className='flex lg:gap-12 justify-center'>
                     <Tab>Wooden Toys</Tab>
@@ -53,7 +53,7 @@ const ShopCategory = () => {
                 <TabPanel>
                     <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            woodenToys.map(ty => <SingleToy
+                            woodenToys.slice(0, 3).map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }
@@ -62,7 +62,7 @@ const ShopCategory = () => {
                 <TabPanel>
                     <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            stuffedToys.map(ty => <SingleToy
+                            stuffedToys.slice(0, 3).map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }
@@ -71,7 +71,7 @@ const ShopCategory = () => {
                 <TabPanel>
                     <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            constructionToys.map(ty => <SingleToy
+                            constructionToys.slice(0, 3).map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }
@@ -80,7 +80,7 @@ const ShopCategory = () => {
                 <TabPanel>
                     <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
                         {
-                            transformerToys.map(ty => <SingleToy
+                            transformerToys.slice(0, 3).map(ty => <SingleToy
                                 key={ty._id}
                                 ty={ty} />)
                         }

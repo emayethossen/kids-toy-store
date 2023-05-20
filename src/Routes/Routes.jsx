@@ -12,6 +12,7 @@ import Register from "../components/Register/Register";
 import Error from "../components/Error/Error";
 import UpdateToy from "../components/UpdateToy/UpdateToy";
 import PrivateRoute from "./PrivateRoute";
+import SingleToyDetails from "../components/SingleToyDetails/SingleToyDetails";
 
 const router = createBrowserRouter([
     {
@@ -48,9 +49,14 @@ const router = createBrowserRouter([
                 element: <Register />,
             },
             {
+                path: '/single-toy/:id',
+                element: <PrivateRoute><SingleToyDetails /></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://baby-toys-server-five.vercel.app/toys/${params.id}`)
+            },
+            {
                 path: 'my-toys/update-toy/:id',
                 element: <UpdateToy />,
-                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+                loader: ({ params }) => fetch(`https://baby-toys-server-five.vercel.app/toys/${params.id}`)
             }
         ]
     },

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const SingleToy = ({ ty }) => {
 
@@ -27,7 +28,9 @@ const SingleToy = ({ ty }) => {
             <td>{quantity}</td>
             <td>${price}</td>
             <th>
-                <button className="btn bg-[#6495ED] border-none hover:bg-[#ff69b4] uppercase">details</button>
+                <Link to={`/single-toy/${_id}`}>
+                    <button className="btn bg-[#6495ED] border-none hover:bg-[#ff69b4] uppercase">details</button>
+                </Link>
             </th>
         </tr>
     );

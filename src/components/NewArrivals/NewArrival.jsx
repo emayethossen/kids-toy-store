@@ -16,7 +16,7 @@ const NewArrival = () => {
 
     return (
         <div className='my-12'>
-            <h2 className='text-3xl lg:text-5xl font-bold text-center'>New Arrivals Toys</h2>
+            <h2 className='text-3xl lg:text-5xl font-bold text-center text-[#FF69B4]'>New Arrivals Toys</h2>
             <p className='text-center font-semibold my-4'>Shop great Toys for your kids</p>
 
             <div className='lg:grid grid-cols-4 gap-4  lg:space-y-0 space-y-4 mx-16'>
