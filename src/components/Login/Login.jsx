@@ -67,7 +67,7 @@ const Login = () => {
                     <button className="btn btn-outline"><FaFacebook className='text-sky-600 hover:bg-[#FF69B4] mr-4 text-xl' /> Continue With Facebook</button><br />
                     <button className="btn btn-outline"><FaTwitter className='text-sky-500 hover:bg-[#FF69B4] mr-4 text-xl' /> Continue With Twitter</button>
                 </div>
-            </div>
+            </div> 
         </div>
 
     );

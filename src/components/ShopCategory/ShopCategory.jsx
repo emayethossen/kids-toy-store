@@ -75,7 +75,7 @@ const ShopCategory = () => {
                                 key={ty._id}
                                 ty={ty} />)
                         }
-                    </div>
+                    </div> 
                 </TabPanel>
                 <TabPanel>
                     <div className='w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-6 my-6'>
