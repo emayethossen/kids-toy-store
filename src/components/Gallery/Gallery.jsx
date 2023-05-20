@@ -1,49 +1,48 @@
-import img1 from '../../assets/gallery-pic/img1.jpg'
 import img2 from '../../assets/gallery-pic/img2.jpg'
 import img3 from '../../assets/gallery-pic/img3.jpg'
 import img4 from '../../assets/gallery-pic/img4.jpg'
 import img5 from '../../assets/gallery-pic/img5.jpg'
 import img6 from '../../assets/gallery-pic/img6.jpg'
 import img7 from '../../assets/gallery-pic/img7.jpg'
+import AOS from 'aos/dist/aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Gallery = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
-        <div className='grid m-1 grid-cols-8 lg:gap-4 gap-1'>
-            <div className='row-span-2 col-span-3 lg:rounded-xl rounded shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img2} alt="" />
+        <div>
+            <h2 className='lg:text-5xl text-3xl text-center font-bold my-6 lg:my-12'>Toys Gallery</h2>
+            <div className='grid lg:grid-cols-4 grid-cols-3 lg:gap-4 gap-1  lg:space-y-0 lg:mx-16'>
+            {/* card one */}
+            <div data-aos="fade-right" className="carousel-item relative w-full lg:col-span-2">
+                <img src={img6} className="h-72 w-full rounded-xl" />
             </div>
-
-            <div className='lg:rounded-xl rounded col-span-3 shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img3} alt="" />
+            {/* card two */}
+            <div data-aos="flip-right" className="carousel-item relative w-full">
+                <img src={img2} className="h-72 w-full rounded-xl" />
             </div>
-
-            <div className='lg:rounded-xl rounded col-span-2 shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img4} alt="" />
+            {/* card three */}
+            <div data-aos="flip-left" className="carousel-item relative w-full">
+                <img src={img3} className="h-72 w-full rounded-xl" />
             </div>
-            <div className='lg:rounded-xl rounded col-span-2 shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img5} alt="" />
+            {/* card 4 */}
+            <div data-aos="flip-right" className="carousel-item relative w-full">
+                <img src={img4} className="h-72 w-full rounded-xl" />
             </div>
-            <div className='lg:rounded-xl rounded col-span-3 shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img6} alt="" />
+            {/* card 5 */}
+            <div data-aos="flip-left" className="carousel-item relative w-full">
+                <img src={img5} className="h-72 w-full rounded-xl" />
             </div>
-            <div className='lg:rounded-xl rounded col-span-2 shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img1} alt="" />
+            {/* card 6 */}
+            <div data-aos="fade-up-left" className="carousel-item relative w-full lg:col-span-2">
+                <img src={img7} className="h-72 w-full rounded-xl" />
             </div>
-
-            <div className='lg:rounded-xl rounded col-span-3 shadow-xl '>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img2} alt="" />
-            </div>
-            <div className='lg:rounded-xl rounded col-span-3 shadow-xl row-span-2'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img7} alt="" />
-            </div>
-            <div className='lg:rounded-xl rounded col-span-3 shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img3} alt="" />
-            </div>
-
-            <div className='lg:rounded-xl rounded col-span-2 shadow-xl'>
-                <img className='lg:rounded-xl rounded h-full w-full' src={img4} alt="" />
-            </div>
-
+        </div>
         </div>
     );
 };

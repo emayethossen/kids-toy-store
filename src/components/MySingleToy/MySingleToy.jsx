@@ -16,7 +16,7 @@ const MySingleToy = ({ toy, toys, setToys }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/toys/${_id}`, {
+                fetch(`https://baby-toys-server-five.vercel.app/toys/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
