@@ -21,15 +21,15 @@ const HeaderSec = () => {
 
                     <div className="absolute rounded-xl left-0 top-14  text-white w-full">
                         <div className='lg:flex lg:gap-36 items-center justify-center lg:flex-row-reverse space-y-8'>
-                            <div data-aos="fade-right" className='flex justify-center items-center'>
+                            <div data-aos="flip-left" className='flex justify-center items-center'>
                                 <img src={img3} className='w-[400px] h-[420px] lg:w-440px] lg:h-[480px]' />
                             </div>
                             <div className='text-center space-y-4'>
-                                <h4 data-aos="fade-right" className='lg:text-3xl text-2xl font-semibold uppercase'>Mind games</h4>
+                                <h4 data-aos="flip-left" className='lg:text-3xl text-2xl font-semibold uppercase'>Mind games</h4>
                                 <h2 data-aos="fade-up" className='lg:text-6xl text-4xl font-bold'>Favourite Toys</h2>
                                 <p data-aos="fade-down" className='bg-[#FF69B4] py-2 font-semibold w-80 rounded-xl mx-auto'>Up To <span className='text-2xl font-bold'>60%</span> Off On Selected Toys</p>
                                 <div>
-                                    <button data-aos="fade-left" className="btn btn-error text-white">Shop Now</button>
+                                    <button data-aos="flip-right" className="btn btn-error text-white">Shop Now</button>
                                 </div>
                             </div>
                         </div>
@@ -46,15 +46,15 @@ const HeaderSec = () => {
 
                     <div className="absolute rounded-xl left-0 top-14  text-white w-full">
                         <div className='lg:flex lg:gap-36 items-center justify-center space-y-8'>
-                            <div data-aos="fade-right" className='flex justify-center items-center'>
-                                <img data-aos="fade-right" src={img4} className='w-[400px] h-[420px] lg:w-440px] lg:h-[480px]' />
+                            <div data-aos="flip-left" className='flex justify-center items-center'>
+                                <img data-aos="flip-left" src={img4} className='w-[400px] h-[420px] lg:w-440px] lg:h-[480px]' />
                             </div>
                             <div className='text-center space-y-4'>
-                                <h4 data-aos="fade-right" className='lg:text-3xl text-2xl font-semibold uppercase'>Mind games</h4>
+                                <h4 data-aos="flip-left" className='lg:text-3xl text-2xl font-semibold uppercase'>Mind games</h4>
                                 <h2 data-aos="fade-up" className='lg:text-6xl text-4xl font-bold'>Favourite Toys</h2>
                                 <p data-aos="fade-down" className='bg-[#FF69B4] py-2 font-semibold w-80 rounded-xl mx-auto'>Up To <span className='text-2xl font-bold'>60%</span> Off On Selected Toys</p>
                                 <div>
-                                    <button data-aos="fade-left" className="btn btn-error text-white">Shop Now</button>
+                                    <button data-aos="flip-right" className="btn btn-error text-white">Shop Now</button>
                                 </div>
                             </div>
                         </div>

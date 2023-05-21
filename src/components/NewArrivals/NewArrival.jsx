@@ -21,7 +21,7 @@ const NewArrival = () => {
 
             <div className='lg:grid grid-cols-4 gap-4  lg:space-y-0 space-y-4 mx-16'>
                 {/* card one */}
-                <div data-aos="fade-right" className="carousel-item relative w-full col-span-2">
+                <div data-aos="flip-left" className="carousel-item relative w-full col-span-2">
                     <img src={img1} className="h-72 w-full rounded-xl" />
                     <div className="absolute rounded-xl left-5 top-10">
                         <div className=''>
@@ -92,7 +92,7 @@ const NewArrival = () => {
                     </div>
                 </div>
                 {/* card 6 */}
-                <div data-aos="fade-up-left" className="carousel-item relative w-full col-span-2">
+                <div data-aos="flip-right" className="carousel-item relative w-full col-span-2">
                     <img src={img7} className="h-72 w-full rounded-xl" />
                     <div className="absolute rounded-xl left-5 top-10">
                         <div className=''>

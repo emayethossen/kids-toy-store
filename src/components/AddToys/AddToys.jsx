@@ -1,11 +1,12 @@
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
-import { useState } from "react";
+import { useState,useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const AddToys = () => {
 
     const [category, setCategory] = useState('');
-
+const {user}=useContext(AuthContext)
     const handleAddToys = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -68,7 +69,7 @@ const AddToys = () => {
                         <input type="text" name="sellerName" placeholder="Enter seller Name" className="input" required />
                     </div>
                     <div className="form-control">
-                        <input type="email" name="email" placeholder="Enter seller email" className="input" required />
+                        <input type="email" name="email" defaultValue={user.email} placeholder="Enter seller email" className="input" required />
                     </div>
                     <div className="form-control">
                         <input type="text" name="quantity" placeholder="Enter available quantity" className="input" required />

@@ -8,7 +8,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
 
     const [toys, setToys] = useState([])
-    const url = `https://baby-toys-server-five.vercel.app/toys?email=${user.email}`
+    const url = `https://baby-toys-server-five.vercel.app/toys?email=${user.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

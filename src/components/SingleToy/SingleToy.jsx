@@ -1,17 +1,30 @@
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { Link } from "react-router-dom";
-import AOS  from 'aos/dist/aos';
+import AOS from 'aos/dist/aos';
 import 'aos/dist/aos.css'
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const SingleToy = ({ ty }) => {
-
+    const { user } = useContext(AuthContext)
     const { _id, name, photo, rating, price, } = ty;
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
+
+    const handleClick = () => {
+        if (!user) {
+            Swal.fire({
+                title: 'Login Please',
+                text: 'You have to login first view details',
+                icon: 'error',
+                confirmButtonText: 'Okay'
+            })
+        }
+    }
 
     return (
         <div data-aos="flip-right" className="card card-compact w-full bg-base-100 shadow-xl">
@@ -29,7 +42,7 @@ const SingleToy = ({ ty }) => {
                 </div>
                 <div className="card-actions justify-start">
                     <Link to={`/single-toy/${_id}`}>
-                        <button className="btn w-full border-none hover:bg-[#ff69b4] bg-[#6495ED]">View Details</button>
+                        <button onClick={handleClick} className="btn w-full border-none hover:bg-[#ff69b4] bg-[#6495ED]">View Details</button>
                     </Link>
                 </div>
             </div>

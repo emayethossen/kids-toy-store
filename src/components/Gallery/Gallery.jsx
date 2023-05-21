@@ -19,7 +19,7 @@ const Gallery = () => {
             <h2 className='lg:text-5xl text-3xl text-center font-bold my-6 lg:my-12 text-[#FF69B4]'>Toys Gallery</h2>
             <div className='grid lg:grid-cols-4 grid-cols-3 lg:gap-4 gap-1  lg:space-y-0 lg:mx-16'>
             {/* card one */}
-            <div data-aos="fade-right" className="carousel-item relative w-full lg:col-span-2">
+            <div data-aos="flip-left" className="carousel-item relative w-full lg:col-span-2">
                 <img src={img6} className="h-72 w-full rounded-xl" />
             </div>
             {/* card two */}
@@ -39,7 +39,7 @@ const Gallery = () => {
                 <img src={img5} className="h-72 w-full rounded-xl" />
             </div>
             {/* card 6 */}
-            <div data-aos="fade-up-left" className="carousel-item relative w-full lg:col-span-2">
+            <div data-aos="flip-right" className="carousel-item relative w-full lg:col-span-2">
                 <img src={img7} className="h-72 w-full rounded-xl" />
             </div>
         </div>
