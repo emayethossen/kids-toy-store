@@ -4,9 +4,7 @@ import { Helmet } from 'react-helmet';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const MyToys = () => {
-
     const { user } = useContext(AuthContext)
-
     const [toys, setToys] = useState([])
     const url = `https://baby-toys-server-five.vercel.app/toys?email=${user.email}`;
     useEffect(() => {
@@ -22,11 +20,18 @@ const MyToys = () => {
             <Helmet>
                 <title>Kids Store My Toys</title>
             </Helmet>
+            <div className='w-1/2 text-right rounded-lg'>
+                <h2 className='text-3xl text-left font-bold p-4'>Sort by</h2>
+                <select className="input w-full bg-gray-200 rounded-lg">
+                    <option value="ase">Price Acending</option>
+                    <option value="desc">Price decending</option>
+                </select>
 
+            </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full rounded-xl">
                     {/* head */}
-                    <thead>
+                    <thead className='w-full'>
                         <tr>
                             <th>
                                 <label>
@@ -38,12 +43,11 @@ const MyToys = () => {
                             <th>Sub-Category</th>
                             <th>Quantity</th>
                             <th>Price</th>
-                            <th>Details</th>
                             <th>Edit & Delete</th>
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='w-full'>
                         {
                             toys.map(toy => <MySingleToy
                                 key={toy._id}

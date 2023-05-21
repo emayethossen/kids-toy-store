@@ -43,7 +43,7 @@ const ShopCategory = () => {
         <div className='text-center lg:mx-16'>
             <h2 className='text-3xl lg:text-5xl font-bold my-6 text-[#FF69B4]'>Shop By Category</h2>
             <Tabs className='font-bold'>
-                <TabList className='flex lg:gap-12 justify-center'>
+                <TabList className='grid lg:grid-cols-4 grid-cols-2 lg:gap-12 justify-center'>
                     <Tab>Wooden Toys</Tab>
                     <Tab>Stuffed Toys</Tab>
                     <Tab>Construction Toys</Tab>

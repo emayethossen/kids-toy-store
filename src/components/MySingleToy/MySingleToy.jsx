@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const MySingleToy = ({ toy, toys, setToys }) => {
-    const { _id, details, photo, name, category, quantity, price, sellerName } = toy;
+    const { _id, photo, name, category, quantity, price, sellerName } = toy;
     const handleDelete = (_id) => {
         Swal.fire({
             title: 'Are you sure?',
@@ -59,7 +59,6 @@ const MySingleToy = ({ toy, toys, setToys }) => {
             <td>{category}</td>
             <td>{quantity}</td>
             <td>${price}</td>
-            <td>${details}</td>
             <th>
                 <div className="flex lg:flex-col justify-center gap-6">
                     <Link to={`update-toy/${_id}`}>
